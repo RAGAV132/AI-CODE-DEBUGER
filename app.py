@@ -8,8 +8,10 @@ from dotenv import load_dotenv
 load_dotenv() # Corrected line
 
 # Set API keys from environment variable
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+GROQ_API_KEY = ST.SECRETS["GROQ
+-API_KEY"]
+GOOGLE_API_KEY = ST.SECRETS["GEMINI
+-API_KEY"]
 
 if not GROQ_API_KEY or not GOOGLE_API_KEY:
     st.error("⚠️ API keys for Groq and Gemini are required. Please set them as Streamlit secrets.")
